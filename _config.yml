@@ -1,141 +1,58 @@
-#page title
-page_title                                :                                           # Automatically populates with app name if not set and if iOS app ID is set. Otherwise enter manually.
+layout: sidebar
+style: light
 
-# App Info
-ios_app_id                                : 1234793120                                # Required. Enter iOS app ID to automatically populate name, price and icons (e.g. 718043190).
+plugins:
+  - jekyll-octicons
+  - jekyll-github-metadata
+  - jemoji
 
-appstore_link                             :                                           # Automatically populates if not set and if iOS app ID is set. Otherwise enter manually.
-playstore_link                            :                                           # Enter Google Play Store URL.
-presskit_download_link                    : https://emilbaehr.com                                          # Enter a link to downloadable file or (e.g. public Dropbox link to a .zip file). 
-                                                                                      # Or upload your press kit file to assets and set path accordingly (e.g. "assets/your_press_kit.zip").
+permalink: /:year/:month/:day/:title/
 
-app_icon                                  : # assets/appicon.png                      # Automatically populates if not set and if iOS app ID is set.  Otherwise enter path to icon file manually.
-app_name                                  :                                           # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
-app_price                                 :                                           # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
-app_description                           : Write a short tagline for your app.
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "post"
 
-enable_smart_app_banner                   : true                                      # Set to true to show a smart app banner at top of page on mobile devices.
+projects:
+  sort_by: pushed
+  # sort_by options:
+  #   - pushed
+  #   - stars
+  limit: 9
+  exclude:
+    archived: false
+    forks: true
+    projects:
+    # - repo-name
 
+# social_media:
+  # behance: your_username
+  # dribbble: your_username
+  # facebook: your_username
+  # hackerrank: your_username
+  # instagram: your_username
+  # keybase: your_username
+  # linkedin: your_username
+  # mastodon: your_username
+  # medium: your_username
+  # stackoverflow: your_user_id
+  # telegram: your_username
+  # twitter: your_username
+  # unsplash: your_username
+  # vk: your_username
+  # website: http://your_website_url
+  # youtube: your_username
 
+topics:
+  - name: CSS
+    web_url: https://github.com/topics/css
+    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png
 
-# Information About Yourself
-your_name                                 : Emil Baehr                                
-your_link                                 : https://emilbaehr.com                     
-your_city                                 : Copenhagen                                
-email_address                             : emil.baehr@gmail.com
-facebook_username                         :                                           
-instagram_username                        : ebaehr
-twitter_username                          : ebaehr
-github_username                           : emilbaehr
-youtube_username                          :
+  - name: Web design
 
-
-
-# Feature List                            Edit, add or remove features to be presented.
-features                                  :
-
-  - title                                 : GitHub Pages Jekyll Theme
-    description                           : Designed for GitHub Pages. Fork. Edit _config.yml. Upload screenshot/video. Push to gh-pages branch. Voilá!
-    fontawesome_icon_name                 : magic
-    
-  - title                                 : iPhone Device Preview
-    description                           : Preview your app in the context of an iPhone device. Five different device colors included.
-    fontawesome_icon_name                 : mobile
-
-  - title                                 : Video Support
-    description                           : Preview app video on the iPhone device simply by placing your video files in the videos folder.
-    fontawesome_icon_name                 : play-circle
-
-  - title                                 : Automatic Icon and Metadata
-    description                           : Enter iOS app ID in the _config.yml file to automatically fetch app icon, price and App Store Link.
-    fontawesome_icon_name                 : sync
-
-  - title                                 : Easy to Tweak
-    description                           : Tweak accent color, images, icons and transparency via the _config.yml file. No HTML/CSS needed.
-    fontawesome_icon_name                 : adjust
-  
-  - title                                 : Feature List
-    description                           : Add features (like this one) to your site via the _config.yml file. No HTML/CSS needed.
-    fontawesome_icon_name                 : star
-
-  - title                                 : Smart App Banner
-    description                           : Display a smart app banner on iOS devices.
-    fontawesome_icon_name                 : arrow-alt-circle-down
-
-  - title                                 : Social Links
-    description                           : Easily add social media accounts and contact info in the footer via the _config.yml file. No HTML/CSS needed.
-    fontawesome_icon_name                 : link
-
-  - title                                 : FontAwesome Support
-    description                           : Pick custom Font Awesome icons for the feature list via the _config.yml file. No HTML/CSS needed.
-    fontawesome_icon_name                 : info-circle
-
-  - title                                 : # New Feature Title
-    description                           : # New Feature Description
-    fontawesome_icon_name                 : # Enter Font Awesome icon name (e.g. star). Find icons on fontawesome.com/icons.
-
-
-
-# Theme Settings
-topbar_color                              : "#000000"
-topbar_transparency                       : 0.1
-topbar_title_color                        : "#ffffff"
-
-cover_image                               : assets/headerimage.png                    # Replace with alternative image path or image URL.
-cover_overlay_color                       : "#363b3d"
-cover_overlay_transparency                : 0.8
-
-device_color                              : black                                     # Set to: blue, black, yellow, coral or white.
-
-body_background_color                     : "#ffffff"
-
-link_color                                : "#1d63ea"
-
-app_title_color                           : "#ffffff"
-app_price_color                           : "#ffffff"
-app_description_color                     : "#ffffff"
-
-feature_title_color                       : "#000000"
-feature_text_color                        : "#666666"
-
-feature_icons_foreground_color            : "#1d63ea"
-feature_icons_background_color            : "#e6e6e6"
-
-social_icons_foreground_color             : "#666666"
-social_icons_background_color             : "#e6e6e6"
-
-footer_text_color                         : "#666666"
-
-
-
-
-
-
-
-
-
-
-
-
-
-####################################################
-### Jekyll Configuration. No need to touch this. ###
-####################################################
-
-# Set the Sass partials directory, as we're using @imports
-sass:
-  style: :compressed # You might prefer to minify using :compressed
-
-# Exclude these files from your production _site
-exclude:
-  - LICENSE
-  - README.md
-  - CNAME
-
-collections:
-  pages:
-    output: true
-    permalink: /:path/
-
-# Markdown rendering
-markdown: kramdown
+  - name: Sass
+    web_url: https://github.com/topics/sass
+    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png
