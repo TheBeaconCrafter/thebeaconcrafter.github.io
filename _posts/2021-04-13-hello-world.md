@@ -1,11 +1,11 @@
 ---
-title: "Willkommen!"
+title: "Server Release!"
 published: true
 ---
 
-**Hello world**, this is my first Jekyll blog post.
+**Hey Leute**, mein Minecraft-Server wird endlich released!
 
-I hope you like it!
+Ihr könnt ihn ab dem 15.04.2021 betreten! IP: play.thebeaconcrafter.tk
 
 # Highlighter
 ## Ruby
